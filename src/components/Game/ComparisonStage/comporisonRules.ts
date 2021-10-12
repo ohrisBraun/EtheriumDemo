@@ -80,7 +80,7 @@ export const comparator = (props: IComparator) => {
 			setSecondPlayerEther(playerTwoEther + 1);
 		}
 
-		if (comparisonIndex < maxLength - 1) {
+		if (comparisonIndex <= maxLength - 1) {
 			setComparisonIndex(comparisonIndex + 1);
 		}
 
