@@ -10,7 +10,7 @@ const App: React.FunctionComponent = () => {
 
     const appRef = React.useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
+    const resizeContainer = () => {
         if ((window.innerWidth / 16) * 9 < window.innerHeight) {
             let value = (window.innerWidth * 100) / 192000;
             let margin = (window.innerHeight - 1080 * value) / 2;
@@ -28,7 +28,7 @@ const App: React.FunctionComponent = () => {
                 appRef.current.style.left = `${margin}px`;
             }
         }
-    });
+    }
 
     const switchTestPanel = (event: KeyboardEvent) => {
         if (event.code === 'Backquote') {
@@ -39,8 +39,11 @@ const App: React.FunctionComponent = () => {
     useEffect(() => {
         document.addEventListener('keydown', switchTestPanel);
 
+        window.addEventListener('resize', resizeContainer);
+        resizeContainer()
         return () => {
             document.removeEventListener('keydown', switchTestPanel);
+            window.removeEventListener('resize', resizeContainer);
         }
     }, []);
 
