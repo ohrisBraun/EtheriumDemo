@@ -1,0 +1,40 @@
+
+@mixin Item {
+  width: 120px;
+  height: 120px;
+}
+
+@keyframes disappearAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.item {
+  @include Item;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+
+.noopItem {
+  @include Item;
+}
+
+.ETHER {
+  background: deepskyblue;
+}
+
+.ATTACK {
+  background: Crimson;
+}
+
+.PROTECT {
+  background: LimeGreen;
+}

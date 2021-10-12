@@ -1,0 +1,36 @@
+.wrapper {
+  position: absolute;
+  z-index: 20;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(51, 119, 255, .2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    background-color: white;
+    padding: 8vh 4vh;
+    border: deepskyblue 3px solid;
+    font-size: 10vh;
+    color: deepskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p:first-child {
+      margin-bottom: 4vh;
+    }
+
+    p:last-child {
+      font-size: 4vh;
+      opacity: .6;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .3;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@keyframes Appearing {
+  from {
+    transform: scale(.5) translateY(200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.randomContainer {
+  opacity: 0;
+  display: flex;
+  animation: Appearing 1s forwards;
+}
+
+.randomValue {
+  position: relative;
+  margin: 0 10px;
+
+  &:hover {
+    cursor: pointer;
+    opacity: .8;
+    box-shadow: 0 0 2px 2px rgba(0, 144, 255, 0.2);
+  }
+}

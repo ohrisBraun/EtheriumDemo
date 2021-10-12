@@ -1,0 +1,23 @@
+.modal {
+  padding: 10px;
+  background-color: lightblue;
+  border: 1px black solid;
+  position: absolute;
+  z-index: 20;
+}
+
+.modalFunction {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modalFunction button {
+  border: 1px black solid;
+  margin-left: 10px;
+  padding: 1px;
+}
+
+.modalFunction input {
+  width: 50px;
+  border: solid 1px blue;
+}
